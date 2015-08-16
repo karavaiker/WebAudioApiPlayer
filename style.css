@@ -1,0 +1,265 @@
+html {
+    color: #969696;
+    background-color: #222;
+}
+
+body {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.flexarea {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+}
+.player {
+    display: flex;
+    height: 600px;
+    width: 800px;
+    margin: auto auto;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    height: 100%;
+    min-width: 200px;
+    background-color: #1e1e1e;
+}
+
+.equalizer {
+    Flex: 1;
+    padding: 20px 10px;    
+}
+
+.addFile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center
+    flex: 1;
+}
+
+#fileZone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border: 1px dashed #5c5c5c;
+    border-radius: 20px;    
+}
+
+#fileZone.hover{
+    border: 3px dashed #7e8800;
+}
+
+
+
+#fileZone.error {
+    border: 1px dashed #b60000;
+    background-color: rgba(255, 0, 0, 0.4);   
+}
+
+#fileZone p {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    color: #616161;    
+}
+
+#fileStatus {
+    padding: 20px;   
+    text-align: center;
+}
+
+
+.playerControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.gl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    margin: 5px;
+    border: 1px solid #cbcbcb;
+    border-radius: 20px;
+    color: floralwhite;
+}
+
+.gl:hover, .glyphicon:hover {
+    cursor: default;
+    border-color: #46a354;
+    color: #46a354;
+}
+.glyphicon {
+margin-top: -2px;
+}
+
+
+.visual {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 9;
+    height: 100%;
+    background-color: rgb(0, 166, 80);
+}
+
+.visualControl {
+    height: 65px;
+    display: flex;    
+    text-align: center;
+    color: #b8b8b8;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+.tabControl {
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.tabmeta.selected, tabwave.selected, tabspectrum.selected {
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+.tabControl:hover, tabControl p:hover {
+    background-color: rgba(0, 0, 0, 0.36);
+    color: #ffffff;
+    cursor: default;
+}
+
+.visualArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.spectr{
+    width: 600px;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	display: none;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;	
+}
+
+.closeBtn {
+	background: #ff000a;
+	color: #ffffff;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+	
+}
+
+.closeBtn:hover { background: #00d9ff; }
+
+    
+.fileInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    min-width:  300px;
+    color: #e0e0e0;
+}
+
+#nameFile:before {
+    content: 'Имя фаила: '
+}
+
+#nameArtist:before {
+    content: 'Артист: '
+}
+
+#nameTitle:before {
+    content: 'Название: '
+}
+
+#nameAlbum:before {
+    content: 'Альбом: '
+}
+
+#nameYear :before {
+    content: 'Год:'
+}
+
+#Genre:before {
+    content: 'Жанр: '
+}
+
+#nameYear:before {
+    content: 'Год: '
+}
+
+.coverImage {
+    color: dimgray;
+    height: 180px;
+    width: 180px;
+    background: #444;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+.textID3 {
+    margin: 20px;
+}
+
+
+
+#picture {
+    display: inline;
+    border: none;
+    height: 180px;
+    width: 180px;
+}
