@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+</head>
+<body>
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#closeBtn" title="Закрыть" class="close">X</a>
+            <h2>Укажите путь к фаилу</h2>
+            <input id="audioFile" type="file" onchange="processFiles(this)" />
+        </div>
+    </div>
+
+    <div class="flexarea">
+        <div class="player">
+            <div class="tools">
+                <div class="equalizer">                    
+                </div>
+
+                <div class="addFile">
+                    <div id="fileZone">                        
+                        <p><span class="glyphicon glyphicon-inbox"></span></br>Перетяните фаил для воспроизведения <small>или нажмте <a href="#openModal">обзор</a></small></p>
+                    </div>
+                    <div id="fileStatus"></div>
+                </div>
+
+                <div class="playerControls">
+                    <div class="gl" id="playbtn" data-sound="music.mp3"><span class="glyphicon glyphicon-play"></span></div>
+                    <div class="gl" id="stopbtn"><span class="glyphicon glyphicon-stop"></span></div>
+                </div>
+
+            </div>
+
+            <div class="visual">
+                <div class="visualControl">
+                    <div class="tabControl tabmeta">
+                        <p>Обложка</p>
+                    </div>
+                    <div class="tabControl tabwave">
+                        <p>Waveform</p>
+                    </div>
+                    <div class="tabControl tabspectrum">
+                        <p>Spectrum</p>
+                    </div>
+                </div>
+
+                <div class="visualArea">
+                    <div class="fileInfo">
+                        <div class="coverImage">
+                            <img id="picture" src="image/cover.png" alt="coverImage">
+                        </div>
+                        
+                        <div class="textID3">
+                            <p id="nameFile"></p>
+                            <p id="nameArtist"></p>
+                            <p id="nameTitle"></p>
+                            <p id="nameAlbum"></p>
+                            <p id="nameYear"></p>
+                            <p id="nameGenre"></p>
+                        </div>
+                    </div>
+                    <canvas class="spectr" id="visualizer"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="id3-minimized.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
