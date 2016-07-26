@@ -1,5 +1,5 @@
-<h1> Плеер на web audio api </h1>
-<p> Посмотреть в работе <a href="http://karavaiker.bl.ee/yandex/task3/index.html">тыц</a><p>
+##Плеер на web audio api
+Посмотреть в работе <a href="http://karavaiker.bl.ee/yandex/task3/index.html">тыц</a><p>
 
 <h4> Функционал </h4>
 
